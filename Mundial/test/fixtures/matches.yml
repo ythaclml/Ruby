@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  match_date: 2014-04-03
+  stage: 1
+  status: 1
+  local: MyString
+  visit: MyString
+  score: MyString
+  loser: MyString
+  winner: MyString
+  string: MyString
+  draw: false
+  group_id: MyString
+  stadium_id: MyString
+
+two:
+  match_date: 2014-04-03
+  stage: 1
+  status: 1
+  local: MyString
+  visit: MyString
+  score: MyString
+  loser: MyString
+  winner: MyString
+  string: MyString
+  draw: false
+  group_id: MyString
+  stadium_id: MyString
