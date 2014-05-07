@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404000834) do
+ActiveRecord::Schema.define(version: 20140507204614) do
 
   create_table "groups", force: true do |t|
     t.string   "name"
@@ -36,6 +36,23 @@ ActiveRecord::Schema.define(version: 20140404000834) do
     t.datetime "updated_at"
   end
 
+  create_table "participations", force: true do |t|
+    t.integer  "team_id"
+    t.integer  "group_id"
+    t.integer  "total_points"
+    t.integer  "total_games"
+    t.integer  "total_wins"
+    t.integer  "total_losses"
+    t.integer  "total_draws"
+    t.integer  "goalbuncs_scored"
+    t.integer  "goals_against"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "participations", ["group_id"], name: "index_participations_on_group_id"
+  add_index "participations", ["team_id"], name: "index_participations_on_team_id"
+
   create_table "stadia", force: true do |t|
     t.string   "name"
     t.string   "city"
@@ -52,6 +69,12 @@ ActiveRecord::Schema.define(version: 20140404000834) do
     t.string   "flag"
     t.string   "uniform"
     t.string   "history"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tests", force: true do |t|
+    t.string   "test"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
